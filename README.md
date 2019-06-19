@@ -1,5 +1,16 @@
 [![Build Status](https://travis-ci.org/vmware/pyvmomi-community-samples.svg?branch=master)](https://travis-ci.org/vmware/pyvmomi-community-samples) 
 
+추가 작업 내용
+==================
+
+SSL Connection 에러 이슈로, import ssl 관련 unverfified로 변경함.
+이러한 구성을 통해 SSL에 대한 에러를 제거하였고, 모든 샘플 py에 함수 추가함.
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
+by Woo Hyung Choi / whchoi98@gmail.com
+
 pyvmomi-community-samples
 =========================
 
